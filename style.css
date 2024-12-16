@@ -1,0 +1,96 @@
+:root {
+    --main-font: "Mulish", sans-serif;
+    --color: black;
+    --border-color: grey;
+    --background-color: white;
+}
+
+h1, h2, h3, p {
+margin: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 800px;
+    max-height: 1120px;
+    padding: 10px; 
+}
+
+.invoice-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    span {
+        font-weight: bold;
+    }
+}
+
+.company {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-right: 10%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  .seller-data
+  .buyer-data {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 50%;
+
+    span {
+      font-weight: bold;
+    }
+    } 
+  }
+  
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    table,
+    tr,
+    th,
+    td {
+        border: 1px solid var(--border-color);
+        border-collapse: collapse;
+        margin-left: 2%;
+        margin-right: 10%;
+        text-align: center;
+        font-weight: normal;
+        padding: 2px;
+    }
+    
+    table {
+      width: 100%;
+    }
+    th {
+      font-weight: bold;
+    }
+  }
+ 
+.totals {
+    margin-top: 20px 20px;
+    margin-left: 45%;
+
+    span {
+      font-weight: bold;
+    }
+}
+
+.signing-container {
+    display: flex;
+    justify-content: center;
+    gap: 280px;
+    margin-top: 20px;
+    margin-right: 25%;
+    font-style: italic;
+}
+

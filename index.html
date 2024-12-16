@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>b_Sąskaitos generatorius</title>
+</head>
+<body>
+    <main class="invoice-container">
+        <div class="invoice-data">
+            <h1>PVM Sąskaita-faktūra</h1>
+            <p>Sąskaitos Nr.: <span id="invoice-number"></span></p>
+            <p>Sąskaitos data: <span id="invoice-date"></span></p>
+            <p>Apmokėti iki: <span id="invoice-due-date"></span></p>
+
+        <div class="company">
+            <div class="seller-data">
+                <h3>Pardavėjas</h3>
+                <p><u>Pavadinimas:</u> <span id="seller-name"></span></p>
+                <p><u>Adresas:</u> <span id="seller-address"></span></p>
+                <p><u>Įmonės kodas:</u> <span id="seller-code"></span></p>
+                <p><u>PVM mokėtojo kodas:</u> <span id="seller-vat"></span></p> 
+                <p><u>Tel.Nr.:</u> <span id="seller-phone"></span></p>
+                <p><u>E-paštas:</u> <span id="seller-email"></span></p>
+            </div>
+
+            <div class="buyer-data"> 
+                <h3>Pirkėjas</h3>
+                <p><u>Pavadinimas / v.pavardė:</u> <span id="buyer-name"></span></p>
+                <p><u>Adresas:</u> <span id="buyer-address"></span></p>
+                <p><u>Įmonės / asmens kodas:</u> <span id="buyer-code"></span></p>
+                <p><u>PVM mokėtojo kodas:</u> <span id="buyer-vat"></span></p> 
+                <p><u>Tel.Nr.:</u> <span id="buyer-phone"></span></p>
+                <p><u>E-paštas:</u> <span id="buyer-email"></span></p>
+            </div>
+        </div>
+
+        <div class="items">
+            <table>
+                <thead>
+                    <tr>
+                        <!-- <th class="sequence">Eil.Nr.</th> -->
+                        <th class="description">Prekės/paslaugos pavadinimas</th>
+                        <th class="quantity">Kiekis (vnt.)</th>
+                        <th class="price">Kaina (be PVM) EUR</th>
+                        <th class="discount">Nuolaida (EUR)</th>
+                        <th class="total-price">Pilna kaina</th>
+                    </tr>
+                </thead>
+                <tbody id="items-list"></tbody>
+            </table>
+        </div>
+
+        <div class="totals">
+            <p>Pristatymo išlaidos (EUR): <span id="shippingPrice"></span></p>
+            <p>Tarpinė suma (EUR): <span id="subtotal"></span></p>
+            <p>PVM (21%): <span id="vat"></span></p>
+            <p>Mokėtina suma su PVM (EUR): <span id="total"</p>
+        </div>
+
+        <div class="signing-container">
+            <p><b>Sąskaitą išrašė:</b></p>
+            <p><b>Sąskaitą priėmė:</b></p>
+        </div>
+    </main>
+</body>
+</html>
