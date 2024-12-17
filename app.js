@@ -44,8 +44,8 @@ fetch(url)
       totalPrice = `${((item.quantity * item.price) - (item.quantity * (-discount))).toFixed(2)}`;
 
     } else if (item.discount.type === 'percentage') {
-      discountPrecentage = (item.price * item.discount.value / 100)
-      discount = `${item.discount.value}% (-${discountPrecentage.toFixed(2)})`
+      discountPercentage = (item.price * item.discount.value / 100)
+      discount = `${item.discount.value}% (-${discountPercentage.toFixed(2)})`
       totalPrice = (item.quantity * item.price - (item.quantity * (item.price * item.discount.value / 100))).toFixed(2);
 
     } else {
