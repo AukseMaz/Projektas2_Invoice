@@ -1,97 +1,112 @@
-:root {
-    --main-font: "Mulish", sans-serif;
-    --color: black;
-    --border-color: grey;
-    --background-color: white;
-}
-
-
-h1, h2, h3, p {
-margin: 10px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
-    max-width: 800px;
-    max-height: 1120px;
-    padding: 10px; 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.invoice-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    span {
-        font-weight: bold;
-    }
+.invoice-container {
+  max-width: 800px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
 }
 
+h1, h3 {
+  color: #222;
+}
+
+p {
+  margin: 5px 0;
+  color: #444;
+}
+
+/* Company Details */
 .company {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
-  margin-right: 10%;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
 
-  .seller-data
-  .buyer-data {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    width: 50%;
+.seller-data, .buyer-data {
+  width: 48%;
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
 
-    span {
-      font-weight: bold;
-    }
-    } 
-  }
-  
-.items {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    table,
-    tr,
-    th,
-    td {
-        border: 1px solid var(--border-color);
-        border-collapse: collapse;
-        margin-left: 2%;
-        margin-right: 10%;
-        text-align: center;
-        font-weight: normal;
-        padding: 2px;
-    }
-    
-    table {
-      width: 100%;
-    }
-    th {
-      font-weight: bold;
-    }
-  }
- 
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead tr {
+  background-color: #555;
+  color: #ffffff;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Totals Section */
 .totals {
-    margin-top: 20px 20px;
-    margin-left: 45%;
-
-    span {
-      font-weight: bold;
-    }
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+.totals p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Signing Section */
 .signing-container {
-    display: flex;
-    justify-content: center;
-    gap: 280px;
-    margin-top: 20px;
-    margin-right: 25%;
-    font-style: italic;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
+.signing-container p {
+  border-top: 1px solid #222;
+  width: 45%;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .company {
+      flex-direction: column;
+  }
+  .seller-data, .buyer-data {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
